@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.demoPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7fafc;
+}
+.group-hover\:text-opacity-100:hover .group-hover\:text-opacity-100 {
+  text-opacity: 100;
+}
+.group-hover\:bg-blue-500:hover .group-hover\:bg-blue-500 {
+  background-color: #3b82f6;
+}
+
+
+.transition-max-height {
+  transition: max-height 0.3s ease-in-out;
+}
+.max-h-screen {
+  max-height: 100vh;
+}
+.max-h-0 {
+  max-height: 0;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.bg-blue-500 {
+  background-color: #4299e1;
+}
+.text-blue-500 {
+  color: #4299e1;
+}
+.text-blue-500:hover {
+  color: #2b6cb0;
+}
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+.transition-max-height {
+  transition: max-height 0.3s ease-in-out;
+}
+.max-h-screen {
+  max-height: 100vh;
+}
+.max-h-0 {
+  max-height: 0;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.bg-blue-500 {
+  background-color: #4299e1;
+}
+.text-blue-500 {
+  color: #4299e1;
+}
+.text-blue-500:hover {
+  color: #2b6cb0;
+}
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.relative .hover\:opacity-100:hover {
+  opacity: 1;
+}
+.relative .hover\:opacity-100 {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
