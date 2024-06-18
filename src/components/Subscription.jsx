@@ -4,26 +4,32 @@ import { PayPalButtons } from '@paypal/react-paypal-js';
 const subscriptions = [
   {
     name: 'Lector Básico',
-    cost: '$4.50 USD mensuales',
+    cost: '4.50',
     details: [
-      'Acceso Anticipado: Acceso a la publicación de nuevos libros antes que el público general.'
+      'Libro gratis sorpresa / mes',
+      'Recomendaciones personalizadas de libros',
+      '10% de descuento en las boletas para los eventos literarios organizados por Books and more'
     ]
   },
   {
     name: 'Lector Avanzado',
-    cost: '$9.00 USD mensuales',
+    cost: '9.00',
     details: [
-      'Acceso Anticipado: Acceso a la publicación de nuevos libros antes que el público general.',
-      'Eventos Exclusivos: Entradas en horarios exclusivos a eventos literarios.'
+      'Libro gratis de la categoría de su elección / mes',
+      '5% de descuento en cajitas literarias',
+      '15% de descuento en las boletas para los eventos literarios organizados por Books and more'
     ]
   },
   {
     name: 'Lector Premium',
-    cost: '$14.50 USD mensuales',
+    cost: '14.50',
     details: [
-      'Acceso Anticipado: Acceso a la publicación de nuevos libros antes que el público general.',
-      'Eventos Exclusivos: Entradas en horarios exclusivos a eventos literarios.',
-      'Libros Gratuitos: Un libro gratuito cada mes.'
+      'Un libro gratis mensual de su elección',
+      'Acceso anticipado y gratuito a eventos literarios organizados por Books and more',
+      'Acceso anticipado a las publicaciones de libros del día',
+      'Participación en clubes de lectura exclusivos y encuentros con autores',
+      '25% de descuentos en campamentos literarios',
+      '10% de descuentos en cajitas literarias'
     ]
   }
 ];
@@ -42,20 +48,20 @@ function Subscription() {
   };
 
   return (
-    <section id="subscriptions" className="p-20 bg-gray-100 text-center">
+    <section id="subscriptions" className="p-20 bg-white text-custom-yellow text-center">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-8">NIVELES DE SUSCRIPCIÓN PARA EL E-COMMERCE DE BOOKS AND MORE</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {subscriptions.map((subscription, index) => (
-            <div key={index} className="relative bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-2xl">
+            <div key={index} className="relative bg-custom-yellow p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-2xl">
               <div className="flex justify-between items-center">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{subscription.name}</h3>
-                  <p className="text-lg font-semibold">{subscription.cost}</p>
+                  <h3 className="text-xl font-bold mb-2 text-custom-dark">{subscription.name}</h3>
+                  <p className="text-lg font-semibold text-custom-dark">${subscription.cost} USD mensuales</p>
                 </div>
                 <button
                   onClick={() => toggleDetails(index)}
-                  className="text-blue-500 focus:outline-none"
+                  className="text-custom-dark focus:outline-none"
                 >
                   {openIndex === index ? '▲' : '▼'}
                 </button>
@@ -66,7 +72,7 @@ function Subscription() {
                 }`}
               >
                 {openIndex === index && (
-                  <div className="mt-4 text-left">
+                  <div className="mt-4 text-left text-custom-dark">
                     <ul className="list-disc list-inside space-y-2">
                       {subscription.details.map((detail, idx) => (
                         <li key={idx}>{detail}</li>
@@ -79,7 +85,7 @@ function Subscription() {
                           return actions.order.create({
                             purchase_units: [{
                               amount: {
-                                value: subscription.cost.split(' ')[0].replace('$', '')
+                                value: subscription.cost
                               }
                             }]
                           });
@@ -97,9 +103,9 @@ function Subscription() {
             </div>
           ))}
         </div>
-        <div className="bg-white p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-2xl">
-          <h3 className="text-2xl font-bold mb-4">Beneficios Comunes:</h3>
-          <ul className="list-disc list-inside space-y-2 text-left">
+        <div className="bg-custom-yellow p-6 rounded-lg shadow-lg transition duration-300 hover:shadow-2xl">
+          <h3 className="text-2xl font-bold mb-4 text-custom-dark">Beneficios Comunes:</h3>
+          <ul className="list-disc list-inside space-y-2 text-left text-custom-dark">
             {commonBenefits.map((benefit, idx) => (
               <li key={idx}>{benefit}</li>
             ))}

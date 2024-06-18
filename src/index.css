@@ -2,6 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+  font-family: 'Playfair Display', serif;
+  color: #393737;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #393737;
+}
+
+p {
+  color: #393737;
+}
+
+.bg-custom-yellow {
+  background-color: #FEF212;
+}
+
+.text-custom-dark {
+  color: #393737;
+}
+
+.button-custom {
+  background-color: #FEF212;
+  color: #393737;
+}
+
+.button-custom:hover {
+  background-color: #d4bc10;
+}
+
+.shadow-custom {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* styles.css */
+.text-custom-dark {
+  color: #333333; /* Ajusta según tu tono oscuro */
+}
+
+.text-custom-yellow {
+  color: #FFD700; /* Ajusta según tu tono de amarillo */
+}
+
+.bg-custom-gray {
+  background-color: #5A5A5A; /* Ajusta según tu tono de gris */
+}
+
+
 .demoPage {
   width: 100%;
   height: 100%;
@@ -10,69 +60,103 @@
   justify-content: center;
   background-color: #f7fafc;
 }
+/* styles.css */
+.bg-custom-dark {
+  background-color: #333333; /* Ajusta según tu tono oscuro */
+}
+
+.text-custom-yellow {
+  color: #FFD700; /* Ajusta según tu tono de amarillo */
+}
+
 .group-hover\:text-opacity-100:hover .group-hover\:text-opacity-100 {
   text-opacity: 100;
 }
+
 .group-hover\:bg-blue-500:hover .group-hover\:bg-blue-500 {
   background-color: #3b82f6;
 }
 
-
 .transition-max-height {
   transition: max-height 0.3s ease-in-out;
 }
+
 .max-h-screen {
   max-height: 100vh;
 }
+
 .max-h-0 {
   max-height: 0;
 }
+
 .overflow-hidden {
   overflow: hidden;
-}
-
-.bg-blue-500 {
-  background-color: #4299e1;
-}
-.text-blue-500 {
-  color: #4299e1;
-}
-.text-blue-500:hover {
-  color: #2b6cb0;
-}
-.shadow-2xl {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-.transition-max-height {
-  transition: max-height 0.3s ease-in-out;
-}
-.max-h-screen {
-  max-height: 100vh;
-}
-.max-h-0 {
-  max-height: 0;
-}
-.overflow-hidden {
-  overflow: hidden;
-}
-
-.bg-blue-500 {
-  background-color: #4299e1;
-}
-.text-blue-500 {
-  color: #4299e1;
-}
-.text-blue-500:hover {
-  color: #2b6cb0;
-}
-.shadow-2xl {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .relative .hover\:opacity-100:hover {
   opacity: 1;
 }
+
 .relative .hover\:opacity-100 {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: white; /* Cambia el color de los iconos de las flechas a blanco */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header, .content, .footer {
+    padding: 20px;
+  }
+
+  .text-4xl {
+    font-size: 2rem;
+  }
+
+  .text-lg {
+    font-size: 1rem;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .h-screen {
+    height: auto;
+  }
+
+  .bg-custom-yellow {
+    padding: 1rem;
+  }
+
+  .relative .hover\:opacity-100:hover {
+    opacity: 1;
+  }
+
+  .relative .hover\:opacity-100 {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+
+}
+.demoPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 100%;
 }

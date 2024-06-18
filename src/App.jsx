@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Services from './components/Services';
 import Subscription from './components/Subscription';
 import ImageGallery from './components/ImageGallery';
+import Ods from './components/Ods';
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
       <Header />
       <Hero />
       <AboutUs />
+      <Ods />
       <Features />
+     
       <Services />
       <Subscription />
       <ImageGallery />

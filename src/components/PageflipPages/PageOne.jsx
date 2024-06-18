@@ -1,31 +1,22 @@
 import React from 'react';
+import charlagrande1 from '../../assets/charlagrande1.jpg';
 
 function PageOne() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center p-8">
-      <div className="w-full flex flex-col md:flex-row items-center">
+    <div className="w-full h-full flex flex-col items-center justify-center p-8 bg-white">
+      <div className="w-full flex flex-col md:flex-row items-center h-full">
         <div className="w-full md:w-1/2 p-4">
-          <img src="https://via.placeholder.com/600x400" alt="About us" className="w-full h-auto rounded-lg shadow-lg" />
+          <img src={charlagrande1} alt="Sobre Nosotros" className="w-full h-auto max-h-full rounded-lg shadow-lg" />
         </div>
-        <div className="w-full md:w-1/2 p-4 text-left">
-          <h2 className="text-3xl font-bold mb-4">ABOUT US</h2>
-          <p className="text-lg mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <div className="w-full md:w-1/2 p-4 text-left overflow-y-auto">
+          <h2 className="text-3xl md:text-2xl font-bold mb-4">Sobre Nosotros</h2>
+          <p className="text-lg md:text-base mb-4">
+            Books and More es una organización dedicada a hacer que los libros sean accesibles para todos, especialmente para los jóvenes en comunidades desfavorecidas. 
           </p>
-          <p className="text-lg mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <p className="text-lg md:text-base mb-4">
+            A través de donaciones de libros, ventas accesibles y eventos educativos, hemos impactado a más de 2,500 niños en 15 escuelas y colegios en ciudades como Santo Domingo, Santiago, Baní, La Vega y San Cristóbal.
           </p>
-          <h3 className="text-2xl font-bold mb-4">Why Choose Us?</h3>
-          <ul className="list-inside list-disc space-y-2">
-            <li>Lorem ipsum dolor</li>
-            <li>Tempor incididunt</li>
-            <li>Lorem ipsum dolor</li>
-            <li>Incididunt ut labore</li>
-            <li>Aliquip ex ea commodo</li>
-            <li>Lorem ipsum dolor</li>
-            <li>Exercitation ullamco</li>
-            <li>Lorem ipsum dolor</li>
-          </ul>
+          
         </div>
       </div>
     </div>
